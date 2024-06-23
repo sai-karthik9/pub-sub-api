@@ -185,8 +185,8 @@ public class CommonContext implements AutoCloseable {
     public GenericRecord createEventMessage(Schema schema) {
         // Update CreatedById with the appropriate User Id from your org.
         return new GenericRecordBuilder(schema).set("CreatedDate", System.currentTimeMillis())
-                .set("CreatedById", "<User_Id>").set("Order_Number__c", "1")
-                .set("City__c", "Los Angeles").set("Amount__c", 35.0).build();
+                .set("CreatedById", "005630000083o8M").set("Body__c", "ABC Test")
+                .set("Mode__c", "Test").set("Source__c", "Test").build();
     }
 
     /**
@@ -202,22 +202,22 @@ public class CommonContext implements AutoCloseable {
     public GenericRecord createEventMessage(Schema schema, final int counter) {
         // Update CreatedById with the appropriate User Id from your org.
         return new GenericRecordBuilder(schema).set("CreatedDate", System.currentTimeMillis())
-                .set("CreatedById", "<User_Id>").set("Order_Number__c", String.valueOf(counter+1))
-                .set("City__c", "Los Angeles").set("Amount__c", 35.0).build();
+                .set("CreatedById", "005630000083o8MAAQ").set("Body__c", "Test")
+                .set("Mode__c", "Test").set("Source__c", "Test").build();
     }
 
     public List<GenericRecord> createEventMessages(Schema schema, final int numEvents) {
 
         String[] orderNumbers = {"99","100","101","102","103"};
         String[] cities = {"Los Angeles", "New York", "San Francisco", "San Jose", "Boston"};
-        Double[] amounts = {35.0, 20.0, 2.0, 123.0, 180.0};
+        // Double[] amounts = {35.0, 20.0, 2.0, 123.0, 180.0};
 
         // Update CreatedById with the appropriate User Id from your org.
         List<GenericRecord> events = new ArrayList<>();
         for (int i=0; i<numEvents; i++) {
             events.add(new GenericRecordBuilder(schema).set("CreatedDate", System.currentTimeMillis())
-                    .set("CreatedById", "<User_Id>").set("Order_Number__c", orderNumbers[i % 5])
-                    .set("City__c", cities[i % 5]).set("Amount__c", amounts[i % 5]).build());
+                    .set("CreatedById", "005630000083o8MAAQ").set("Body__c", orderNumbers[i % 5])
+                    .set("Mode__c", cities[i % 5]).set("Source__c", cities[i % 5]).build());
         }
 
         return events;

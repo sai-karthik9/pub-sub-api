@@ -42,7 +42,7 @@ public class ExampleConfigurations {
     public ExampleConfigurations(String filename) throws IOException {
 
         Yaml yaml = new Yaml();
-        InputStream inputStream = new FileInputStream("src/main/resources/"+filename);
+        InputStream inputStream = new FileInputStream("java/src/main/resources/"+filename);
         HashMap<String, Object> obj = yaml.load(inputStream);
 
         // Reading Required Parameters

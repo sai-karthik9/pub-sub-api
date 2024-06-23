@@ -3,12 +3,14 @@ package utility;
 import java.io.ByteArrayInputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.ConnectException;
+import java.net.URI;
 import java.net.URL;
 import java.nio.ByteBuffer;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import org.apache.avro.data.Json;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.api.ContentResponse;
 import org.eclipse.jetty.client.api.Request;
@@ -57,6 +59,7 @@ public class SessionTokenService {
      * @return
      * @throws Exception
      */
+    @SuppressWarnings("deprecation")
     public APISessionCredentials login(String loginEndpoint, String user, String pwd, boolean useProvidedLoginUrl) throws Exception {
         URL endpoint;
         endpoint = new URL(new URL(loginEndpoint), SERVICES_SOAP_PARTNER_ENDPOINT);
@@ -67,7 +70,6 @@ public class SessionTokenService {
         post.header("PrettyPrint", "Yes");
         ContentResponse response = post.send();
         LoginResponseParser parser = parse(response);
-
         final String token = parser.sessionId;
         if (token == null || parser.serverUrl == null) {
             throw new ConnectException(String.format("Unable to login: %s", parser.faultstring));

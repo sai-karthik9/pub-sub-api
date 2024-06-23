@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AccountListener",
+            "request": "launch",
+            "mainClass": "accountupdateapp.AccountListener",
+            "projectName": "pubsub-java"
+        },
+        {
+            "type": "java",
+            "name": "AccountUpdater",
+            "request": "launch",
+            "mainClass": "accountupdateapp.AccountUpdater",
+            "projectName": "pubsub-java"
+        },
+        {
+            "type": "java",
+            "name": "GetSchema",
+            "request": "launch",
+            "mainClass": "genericpubsub.GetSchema",
+            "projectName": "pubsub-java"
+        },
+        {
+            "type": "java",
+            "name": "GetTopic",
+            "request": "launch",
+            "mainClass": "genericpubsub.GetTopic",
+            "projectName": "pubsub-java"
+        },
+        {
+            "type": "java",
+            "name": "ManagedSubscribe",
+            "request": "launch",
+            "mainClass": "genericpubsub.ManagedSubscribe",
+            "projectName": "pubsub-java"
+        },
+        {
+            "type": "java",
+            "name": "Publish",
+            "request": "launch",
+            "mainClass": "genericpubsub.Publish",
+            "projectName": "pubsub-java"
+        },
+        {
+            "type": "java",
+            "name": "PublishStream",
+            "request": "launch",
+            "mainClass": "genericpubsub.PublishStream",
+            "projectName": "pubsub-java"
+        },
+        {
+            "type": "java",
+            "name": "Subscribe",
+            "request": "launch",
+            "mainClass": "genericpubsub.Subscribe",
+            "projectName": "pubsub-java"
+        },
+        {
+            "type": "java",
+            "name": "ProcessChangeEventHeader",
+            "request": "launch",
+            "mainClass": "processchangeeventheader.ProcessChangeEventHeader",
+            "projectName": "pubsub-java"
+        }
+    ]
+}
