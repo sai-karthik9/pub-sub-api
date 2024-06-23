@@ -17,9 +17,9 @@ LOGIN_URL: https://autodesk--adsksfdv.my.salesforce.com
 # For authentication, you can use either username/password or accessToken/tenantId types.
 # Either one of the combinations is required. Please specify `null` values to the unused type.
 # Your Salesforce Username
-USERNAME: sai.karthik.anupoju@autodesk.com.prd.adsksfdv
+USERNAME: 
 # Your Salesforce Password
-PASSWORD: WUqid0sIxlbUtR@e7IPaqXgIKwRxSp1rWqNuXa3cuGwqMg
+PASSWORD: 
 # Your Salesforce org Tenant ID
 TENANT_ID: null
 # Your Salesforce Session Token
@@ -29,7 +29,7 @@ ACCESS_TOKEN: null
 # Optional configurations:
 # =========================
 # Topic to publish/subscribe to (default: /event/Order_Event__e)
-TOPIC: /event/QuoteUpdate__e
+TOPIC: 
 # Number of Events to publish in single or separate batches (default: 5)
 # Used only by PublishStream.java
 NUMBER_OF_EVENTS_TO_PUBLISH: null
